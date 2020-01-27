@@ -27,7 +27,7 @@ export class HomePage {
       if (result.success === true) {
         this.dataHome = result.data;
       } else {
-        this.presentAlert('Warning', result.data);
+        //this.presentAlert('Warning', result.data);
       }
     });
   }

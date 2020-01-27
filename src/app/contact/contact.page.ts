@@ -18,6 +18,7 @@ export class ContactPage implements OnInit {
   }
   getData() {
     this.lessonService.getData('contact').subscribe(result => {
+      console.log(result);
       if (result.success === true) {
         this.data = result.data;
       }else {

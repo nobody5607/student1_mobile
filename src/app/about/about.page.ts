@@ -19,6 +19,7 @@ export class AboutPage implements OnInit {
   }
   getData() {
     this.lessonService.getData('about').subscribe(result => {
+      //console.log(result);
       if (result.success === true) {
         this.data = result.data;
       }else {

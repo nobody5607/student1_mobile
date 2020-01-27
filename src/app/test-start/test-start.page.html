@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-profile></app-profile>
+    <form #userlogin="ngForm">
+      <ion-list> 
+          
+        <ion-item class="item-label item ios in-list ion-focusable hydrated" *ngFor="let i of tests">
+          <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">
+            <ion-row>
+              <ion-col size='2'><h2>{{i.number}}.</h2></ion-col>
+              <ion-col size='10'><h2 text-wrap [innerHTML]="i.question" style="margin-top: -3px;"></h2> </ion-col>
+            </ion-row>
+            
+            
+            <ion-list >
+                <ion-radio-group  name="radio-group"> 
+                    <ion-item *ngFor="let row of i.answers; let idx = index;" class="item item-text-wrap">
+                        <label style="padding-right:10px;">{{ row.label }}</label> <ion-label text-wrap  [innerHTML]="row.value"> </ion-label>
+                        <ion-radio
+                          (ionSelect)='onSelected(row)'
+                          slot="start" 
+                          name='answers{{row.id}}' 
+                          value="{{row.id}}" >
+                        </ion-radio>
+                    </ion-item>
+                </ion-radio-group>
+              </ion-list> 
+
+          </ion-label>
+          
+          
+        </ion-item> 
+      </ion-list>
+      <ion-card style="margin-bottom: 100px;">
+          <ion-button  (click)="onSubmit()" type='submit' expand="block" class="ios button button-block button-solid ion-activatable ion-focusable hydrated">ส่งคำตอบ</ion-button>
+    </ion-card>
+      
+    </form>
+</ion-content>
+ 

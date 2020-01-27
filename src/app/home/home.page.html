@@ -1,0 +1,43 @@
+<ion-header> 
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+          
+          <ion-row>
+              <ion-col size="10">
+                  หน้าหลัก
+              </ion-col>
+              <ion-col size="2">
+                
+              </ion-col>
+            </ion-row>
+        </ion-title>
+      </ion-toolbar> 
+</ion-header>
+
+<ion-content>
+    <div style="
+    background:black;
+       /* background: #f2f2f4 url(../../assets/images/menu.jpg)no-repeat; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    margin-top: -9px;
+    padding: 10px;
+    background-attachment: fixed;
+    box-sizing: content-box;
+    height: 110%;
+">
+<div style='color:#fff;text-align:center;'>HOME</div> 
+<ion-card style="overflow: scroll;
+height: 600px;">  
+    <ion-card-content *ngIf="dataHome">
+        <div [innerHTML]="dataHome">OK</div>
+    </ion-card-content>
+  </ion-card>
+ </div>
+  
+</ion-content>

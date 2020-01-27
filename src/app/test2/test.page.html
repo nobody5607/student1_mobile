@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>แบบทดสอบก่อน-หลังเรียน</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <div style="    background: linear-gradient(90deg, rgba(145, 245, 220, 0.08) 0%, rgba(111, 251, 231, 0.2) 33%, rgba(103, 211, 232, 0.27) 100%);">
+      <ion-card (click)="testStart(1)" color='secondary' [disabled]="!enableStartTest">
+        <ion-card-header>
+            <h2 class="text-center"><ion-icon name="paper"></ion-icon> แบบทดสอบก่อนเรียน</h2>
+        </ion-card-header> 
+      </ion-card>
+
+        <ion-card (click)="testStart(2)" style="background:#9C27B0;color:#fff;" color='primary' [disabled]="!enableEndTest">
+          <ion-card-header>
+              <h2 class="text-center"><ion-icon name="paper"></ion-icon> แบบทดสอบหลังเรียน</h2>
+          </ion-card-header> 
+        </ion-card>
+
+        <ion-card (click)="score()" color='warning'>
+          <ion-card-header>
+              <h2 class="text-center"> คะแนนแบบทดสอบก่อน/หลังเรียน</h2>
+          </ion-card-header> 
+        </ion-card>
+        <ion-row class="bg-image" 
+        style="
+            /* background:url(../assets/images/start.png);
+            background-size: 100% 100% !important;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            width: 100%;
+            height: 35%; 
+            position: fixed; 
+            bottom: 0;  */
+      ">
+      </ion-row> </div>    
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>คะแนนแบบทดสอบก่อน/หลังเรียน</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div style="
+    background:#f2f2f4 url(../../assets/images/score.jpg)no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    margin-top: -9px;
+    padding:10px;
+    background-attachment: fixed;
+">
+  <ion-card  color='warning' style="background: #3171e0;">
+    <ion-card-header>
+        <h2 class="text-center">คะเเนนก่อนเรียน {{start_score}}/{{numberSt}}</h2>
+    </ion-card-header> 
+  </ion-card>
+  <ion-card  style="background:#3171e0;color:#fff;" color='primary'>
+    <ion-card-header>
+        <h2 class="text-center">คะเนนหลังเรียน {{end_score}}/{{numberEn}}</h2>
+    </ion-card-header> 
+  </ion-card>
+ </div>
+</ion-content>

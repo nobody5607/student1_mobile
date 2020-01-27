@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>ช่องทางติดต่อ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+    <div style="
+    background:#f2f2f4 url(../../assets/images/baa.jpg)no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    margin-top: -9px;
+    padding:10px;
+    background-attachment: fixed;
+">
+<ion-card style=""> 
+    <ion-card-content *ngIf="data">
+        <div [innerHTML]="data"></div>
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>
